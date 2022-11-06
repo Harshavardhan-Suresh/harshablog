@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { Header } from "./components/Header";
+import React, { useEffect, useState } from "react";
+import { Route, Routes } from "react-router-dom";
+import { UserBlogs } from "./components/UserBlogs";
+import Auth from "./components/Auth";
+import { AddBlog } from "./components/AddBlog";
+import { BlogDetail } from "./components/BlogDetail";
+import { useSelector } from "react-redux";
+import Blogs from "./components/Blogs";
+import Profile from "./components/Profile";
+import UserProfile from "./components/UserProfile";
+import Followers from "./components/Followers";
+import Following from "./components/Following";
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [value, setValue] = useState();
+  const [refreshPage, setRefreshPage] = useState(0);
+  return <React.Fragment>
+    <header>
+      <Header value = {value} setValue={setValue} refreshPage={refreshPage} setRefreshPage={setRefreshPage}/>
+    </header>
+    <main >
+      <Routes >
+        <Route path="/auth" element={<Auth setValue={setValue} refreshPage={refreshPage} setRefreshPage={setRefreshPage}/>} />
+        <Route path="/blogs" element={<Blogs setValue={setValue} refreshPage={refreshPage} setRefreshPage={setRefreshPage}/>} />
+        <Route path="/myBlogs" element={<UserBlogs setValue={setValue} refreshPage={refreshPage} setRefreshPage={setRefreshPage}/>} />
+        <Route path="/myBlogs/:id" element={<BlogDetail />} />
+        <Route path="/user/" element={<Profile setValue={setValue} refreshPage={refreshPage} setRefreshPage={setRefreshPage}/>} />
+        <Route path="/user/:id" element={<UserProfile setValue={setValue} refreshPage={refreshPage} setRefreshPage={setRefreshPage}/>} />
+        <Route path="/following/:id" element={<Following setValue={setValue}/>} />
+        <Route path="/followers/:id" element={<Followers setValue={setValue}/>} />
+        <Route path="/blogs/add" element={<AddBlog setValue={setValue}/>} />
+      </Routes>
+    </main>
+  </React.Fragment>
 }
 
 export default App;
