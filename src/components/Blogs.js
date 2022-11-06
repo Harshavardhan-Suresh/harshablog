@@ -19,7 +19,7 @@ const Blogs = ({setValue, refreshPage, setRefreshPage}) => {
   return (
     <div>
       {blogs &&
-        blogs.map((blog, index) => (
+        blogs.map((blog) => (
           <Blog refreshPage={refreshPage} setRefreshPage={setRefreshPage}
             id={blog._id}
             isUser={localStorage.getItem("userId") === blog.user._id}

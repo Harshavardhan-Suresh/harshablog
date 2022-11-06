@@ -5,7 +5,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 
 const Following = ({setValue}) => {
-    const [data, setData] = useState();
+  const [data, setData] = useState();
   const id = useParams().id;
   const navigate = useNavigate();
   

@@ -1,11 +1,10 @@
 import { Header } from "./components/Header";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import { UserBlogs } from "./components/UserBlogs";
 import Auth from "./components/Auth";
 import { AddBlog } from "./components/AddBlog";
 import { BlogDetail } from "./components/BlogDetail";
-import { useSelector } from "react-redux";
 import Blogs from "./components/Blogs";
 import Profile from "./components/Profile";
 import UserProfile from "./components/UserProfile";

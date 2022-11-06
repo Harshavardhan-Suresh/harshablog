@@ -3,7 +3,6 @@ import axios from "axios";
 import Blog from "./Blog";
 export const UserBlogs = ({setValue, refreshPage, setRefreshPage}) => {
   const [user, setUser] = useState();
-  const id = localStorage.getItem("userId");
   const sendRequest = async () => {
     const res = await axios
       .get(`https://harsha-blogapp.herokuapp.com/api/blog/`)

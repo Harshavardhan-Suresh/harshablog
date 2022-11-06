@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
 
 const Followers = ({setValue}) => {
-    const [data, setData] = useState();
+  const [data, setData] = useState();
   const id = useParams().id;
   const navigate = useNavigate();
   

@@ -22,7 +22,7 @@ const Blog = ({ title, description, image, userName, isUser, id}) => {
     navigate(`/myBlogs/${id}`);
   };
   const deleteRequest = async () => {
-    const res = await axios
+    await axios
       .delete(`https://harsha-blogapp.herokuapp.com/api/blog/${id}`)
       .catch((err) => console.log(err));
     // const data = await res.data;
