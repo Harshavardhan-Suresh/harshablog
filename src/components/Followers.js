@@ -16,6 +16,7 @@ const Followers = ({setValue}) => {
       setData(res.data.user.followers); 
       console.log(data);
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <div>

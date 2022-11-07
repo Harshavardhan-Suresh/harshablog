@@ -28,7 +28,7 @@ const Auth = ({setValue, refreshPage, setRefreshPage}) => {
         password: inputs.password,
       })
       .catch((err) => {
-        if (type == "login") alert("Invalid credentials");
+        if (type === "login") alert("Invalid credentials");
         else alert("Email id already exists");
       });
 

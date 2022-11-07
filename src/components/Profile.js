@@ -30,6 +30,7 @@ const Profile = ({setValue, refreshPage, setRefreshPage}) => {
       sendRequest().then((data) => setUser(data.blogs));
       findUserRequest().then((data) => setUserDetails(data.user))
       // console.log(user);
+    // eslint-disable-next-line react-hooks/exhaustive-deps      
     }, [refreshPage]);
     return (
       <div>

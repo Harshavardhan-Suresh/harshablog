@@ -42,6 +42,7 @@ export const AddBlog = ({setValue}) => {
     setValue(2);
     // sendRequest().then((data) => setBlogs(data.blogs));
     // console.log(blogs);  
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   return (
     <div>

@@ -35,6 +35,7 @@ export const UserBlogs = ({setValue, refreshPage, setRefreshPage}) => {
     setValue(1);
     sendRequest().then((data) => setUser(data));
     // console.log(user);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [refreshPage]);
   return (
     <div>

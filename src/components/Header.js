@@ -21,6 +21,7 @@ export const Header = ({value, setValue, refreshPage, setRefreshPage}) => {
       setLoggedIn(true)
     else
       setLoggedIn(false)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [refreshPage]);
   const logout = () => {
     localStorage.setItem("userId", "");    

@@ -15,6 +15,7 @@ const Blogs = ({setValue, refreshPage, setRefreshPage}) => {
   useEffect(() => {
     setValue(0);
     sendRequest().then((data) => setBlogs(data.blogs));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [refreshPage]);
   return (
     <div>
@@ -22,6 +23,7 @@ const Blogs = ({setValue, refreshPage, setRefreshPage}) => {
         blogs.map((blog) => (
           <Blog refreshPage={refreshPage} setRefreshPage={setRefreshPage}
             id={blog._id}
+            key={blog._id}
             isUser={localStorage.getItem("userId") === blog.user._id}
             title={blog.title}
             description={blog.description}

@@ -66,6 +66,7 @@ const UserProfile = ({setValue, refreshPage, setRefreshPage}) => {
     //   console.log(follow);
     //   console.log(user);
     //   console.log(userDetails);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [refreshPage]);
     return (
       <div>

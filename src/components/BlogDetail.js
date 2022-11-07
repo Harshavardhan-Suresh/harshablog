@@ -35,6 +35,7 @@ export const BlogDetail = () => {
         description: data.blog.description,
       });
     }); 
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
   const sendRequest = async () => {
     const res = await axios
