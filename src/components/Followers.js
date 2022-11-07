@@ -29,6 +29,7 @@ const Followers = ({setValue}) => {
           sx={{ margin: 1, borderRadius: 2, height: "2em", fontSize:40, }}
           // color="red"
           
+          key = {item._id}
           style={{textJustify: "center"}}
         >
         <p style={{color: "lightgreen"}}>{item.name}</p>

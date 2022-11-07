@@ -11,9 +11,9 @@ import {
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { authActions } from "../store";
-import { useStyles } from "./utils";
+// import { useStyles } from "./utils";
 export const Header = ({value, setValue, refreshPage, setRefreshPage}) => {
-  const classes = useStyles();
+  // const classes = useStyles();
   const dispath = useDispatch();
   const [isLoggedIn, setLoggedIn] = useState(false);
   useEffect(() => {
@@ -37,7 +37,9 @@ export const Header = ({value, setValue, refreshPage, setRefreshPage}) => {
       }}
     >
       <Toolbar>
-        <Typography className={classes.font} variant="h4">
+        <Typography 
+        // className={classes.font}
+        variant="h4">
           BlogsApp
         </Typography>
         {isLoggedIn && (
@@ -48,25 +50,25 @@ export const Header = ({value, setValue, refreshPage, setRefreshPage}) => {
               onChange={(e, val) => setValue(val)}
             >
               <Tab
-                className={classes.font}
+                // className={classes.font}
                 LinkComponent={Link}
                 to="/blogs"
                 label="All Blogs"
               />
               <Tab
-                className={classes.font}
+                // className={classes.font}
                 LinkComponent={Link}
                 to="/myBlogs"
                 label="My Feed"
               />
               <Tab
-                className={classes.font}
+                // className={classes.font}
                 LinkComponent={Link}
                 to="/blogs/add"
                 label="Add Blog"
               />
               <Tab
-                className={classes.font}
+                // className={classes.font}
                 LinkComponent={Link}
                 to="/user"
                 label="Profile"

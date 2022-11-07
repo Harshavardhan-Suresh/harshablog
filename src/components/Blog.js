@@ -14,9 +14,9 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { useStyles } from "./utils";
+// import { useStyles } from "./utils";
 const Blog = ({ title, description, image, userName, isUser, id}) => {
-  const classes = useStyles();
+  // const classes = useStyles();
   const navigate = useNavigate();
   const handleEdit = () => {
     navigate(`/myBlogs/${id}`);
@@ -63,7 +63,7 @@ const Blog = ({ title, description, image, userName, isUser, id}) => {
             <CardHeader
               avatar={
                 <Avatar
-                  className={classes.font}
+                  // className={classes.font}
                   sx={{ bgcolor: "red" }}
                   aria-label="recipe"
                 >
@@ -88,7 +88,7 @@ const Blog = ({ title, description, image, userName, isUser, id}) => {
             <CardHeader
               avatar={
                 <Avatar
-                  className={classes.font}
+                  // className={classes.font}
                   sx={{ bgcolor: "red" }}
                   aria-label="recipe"
                 >
@@ -113,7 +113,7 @@ const Blog = ({ title, description, image, userName, isUser, id}) => {
           <hr />
           <br />
           <Typography
-            className={classes.font}
+            // className={classes.font}
             variant="body2"
             color="text.secondary"
           >
