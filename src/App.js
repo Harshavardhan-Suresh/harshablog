@@ -10,6 +10,7 @@ import Profile from "./components/Profile";
 import UserProfile from "./components/UserProfile";
 import Followers from "./components/Followers";
 import Following from "./components/Following";
+import LandingPage from "./components/LandingPage";
 function App() {
   const [value, setValue] = useState();
   const [refreshPage, setRefreshPage] = useState(0);
@@ -20,7 +21,7 @@ function App() {
     <main >
       <Routes >
         <Route path="/auth" element={<Auth setValue={setValue} refreshPage={refreshPage} setRefreshPage={setRefreshPage}/>} />
-        <Route path="/" element={<Auth setValue={setValue} refreshPage={refreshPage} setRefreshPage={setRefreshPage}/>} />
+        <Route path="/" element={<LandingPage setValue={setValue} refreshPage={refreshPage} setRefreshPage={setRefreshPage}/>} />
         <Route path="/blogs" element={<Blogs setValue={setValue} refreshPage={refreshPage} setRefreshPage={setRefreshPage}/>} />
         <Route path="/myBlogs" element={<UserBlogs setValue={setValue} refreshPage={refreshPage} setRefreshPage={setRefreshPage}/>} />
         <Route path="/myBlogs/:id" element={<BlogDetail />} />
