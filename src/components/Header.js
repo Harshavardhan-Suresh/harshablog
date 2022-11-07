@@ -17,10 +17,10 @@ export const Header = ({value, setValue, refreshPage, setRefreshPage}) => {
   const dispath = useDispatch();
   const [isLoggedIn, setLoggedIn] = useState(false);
   useEffect(() => {
-    if (localStorage.getItem("userId") !== "")
+    if (localStorage.getItem("userId"))
       setLoggedIn(true)
     else
-      setLoggedIn(false)
+      setLoggedIn(false)  
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [refreshPage]);
   const logout = () => {
