@@ -30,8 +30,8 @@ const Blog = ({ title, description, image, userName, isUser, id}) => {
   };
   const handleDelete = () => {
     deleteRequest()
-    .then(() => window.location.reload())
-    // .then(() => navigate("/myBlogs/"));
+    // .then(() => window.location.reload())
+    .then(() => navigate("/user/"));
   };
   const handleUserProfile = async() => {
     const blog_id = id;

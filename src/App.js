@@ -20,6 +20,7 @@ function App() {
     <main >
       <Routes >
         <Route path="/auth" element={<Auth setValue={setValue} refreshPage={refreshPage} setRefreshPage={setRefreshPage}/>} />
+        <Route path="/" element={<Auth setValue={setValue} refreshPage={refreshPage} setRefreshPage={setRefreshPage}/>} />
         <Route path="/blogs" element={<Blogs setValue={setValue} refreshPage={refreshPage} setRefreshPage={setRefreshPage}/>} />
         <Route path="/myBlogs" element={<UserBlogs setValue={setValue} refreshPage={refreshPage} setRefreshPage={setRefreshPage}/>} />
         <Route path="/myBlogs/:id" element={<BlogDetail />} />
