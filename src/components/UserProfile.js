@@ -56,8 +56,8 @@ const UserProfile = ({setValue, refreshPage, setRefreshPage}) => {
             await axios
             .post(`https://harsha-blogapp.herokuapp.com/api/user/unfollow/${id1}/${id}`);    
         }
-        // window.location.reload();
-        navigate("/user/");
+        window.location.reload();
+        // navigate("/user/");
     }
     useEffect(() => {
       setValue(3);
